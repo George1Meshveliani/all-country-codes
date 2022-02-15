@@ -8,7 +8,7 @@
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/George1Meshveliani/all-country-codes
  */
-namespace Meshvelius\LanguageCodes;
+namespace Meshvelius;
 
 /**
  * Language code handler.
@@ -246,7 +246,7 @@ class LanguageCodeCollection {
      *
      * @return array
      */
-    public static function getAll() {
+    public static function all() {
         return static::$data;
     }
 
@@ -257,7 +257,7 @@ class LanguageCodeCollection {
      *
      * @return string|null → language code or null
      */
-    public static function getIt($key) {
+    public static function get($key) {
         if (isset(static::$data[$key])) {
             return static::$data[$key];
         }
