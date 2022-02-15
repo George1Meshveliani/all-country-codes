@@ -1,6 +1,5 @@
 <?php
 /**
- * List of 217 language codes: ISO 639-1.
  *
  * @author    George Meshveliani <giorgi.meshveliani@gmail.com>
  * @copyright 2022 (c) George Meshveliani - all-country-codes
@@ -12,14 +11,14 @@ namespace Meshvelius;
 /**
  * Language code handler.
  */
-class LanguageCodes {
+class PhoneCodes {
     /**
      * Get all language codes as array.
      *
      * @return array → language codes and language names
      */
-    public static function getLanguages() {
-        return CountryCodesCollection::allLanguages();
+    public static function getCountry() {
+        return CountryCodesCollection::allPhones();
     }
 
     /**
@@ -29,18 +28,18 @@ class LanguageCodes {
      *
      * @return string|false → country name
      */
-    public static function getLanguageFromLanguageCode($languageCode) {
-        return CountryCodesCollection::getLanguages($languageCode) ?: false;
+    public static function getCountryNameFromPhoneCode($phoneCode) {
+        return CountryCodesCollection::getCountry($phoneCode) ?: false;
     }
 
     /**
-     * Get language code from language name.
+     * Get phone code from country name.
      *
-     * @param string $languageName → language name, e.g. 'Spanish'
+     * @param string $countryName → country name, e.g. 'Georgia'
      *
-     * @return string|false → language code
+     * @return string|false → phone code
      */
-    public static function getLanguageCodeFromLanguage($languageName) {
-        return array_search($languageName, CountryCodesCollection::allLanguages(),true);
+    public static function getPhoceCodeFromCountryName($countryName) {
+        return array_search($countryName, CountryCodesCollection::allPhones(),true);
     }
 }

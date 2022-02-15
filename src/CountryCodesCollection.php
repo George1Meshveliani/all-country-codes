@@ -1,7 +1,6 @@
 <?php
 
 /**
- * List of 217 language codes: ISO 639-1.
  *
  * @author    George Meshveliani <giorgi.meshveliani@gmail.com>
  * @copyright 2022 (c) George Meshveliani - all-country-codes
@@ -15,7 +14,7 @@ namespace Meshvelius;
  *
  * Compiled from https://wikipedia.org/wiki/List_of_ISO_639-1_codes
  */
-class LanguageCodeCollection {
+class CountryCodesCollection {
     /**
      * List of language codes.
      *
@@ -241,13 +240,57 @@ class LanguageCodeCollection {
         'zu' => 'Zulu'
     ];
 
+    protected static array $phoneCodesData = [
+        "+1"     =>  "United States",
+        "+90 "   =>  "Turkey",
+        "+90392" =>  "Northern Cyprus",
+        "+91 "   =>  "India",
+        "+92 "   =>  "Pakistan",
+        "+93"    =>  "Afghanistan",
+        "+94"    =>  "Sri Lanka",
+        "+95 "   =>  "Myanmar",
+        "+960"   =>  "Maldives",
+        "+961"   =>  "Lebanon",
+        "+962"   =>  "Jordan",
+        "+963"   =>  "Syria",
+        "+964"   =>  "Iraq",
+        "+965"   =>  "Kuwait",
+        "+966"   =>  "Saudi Arabia",
+        "+967"   =>  "Yemen",
+        "+968"   =>  "Oman",
+        "+970"   =>  "Palestine",
+        "+971"   =>  "United Arab Emirates",
+        "+972"   =>  "Israel",
+        "+973"   =>  "Bahrain",
+        "+974"   =>  "Qatar",
+        "+975"   =>  "Bhutan",
+        "+976"   =>  "Mongolia",
+        "+977"   =>  "Nepal",
+        "+98 "   =>  "Iran",
+        "+992"   =>  "Tajikistan",
+        "+993"   =>  "Turkmenistan",
+        "+994"   =>  "Azerbaijan",
+        "+995"   =>  "Georgia",
+        "+996"   =>  "Kyrgyzstan",
+        "+998"   =>  "Uzbekistan",
+    ];
+
     /**
      * Returns all language codes.
      *
      * @return array
      */
-    public static function all() {
+    public static function allLanguages() {
         return static::$languageCodesData;
+    }
+
+    /**
+     * Returns all phone codes.
+     *
+     * @return array
+     */
+    public static function allPhones() {
+        return static::$phoneCodesData;
     }
 
     /**
@@ -257,9 +300,23 @@ class LanguageCodeCollection {
      *
      * @return string|null → language code or null
      */
-    public static function get($key) {
+    public static function getLanguages($key) {
         if (isset(static::$languageCodesData[$key])) {
             return static::$languageCodesData[$key];
+        }
+        return null;
+    }
+
+    /**
+     * Return Country name from phone code.
+     *
+     * @param string $key
+     *
+     * @return string|null → phone code or null
+     */
+    public static function getCountry($key) {
+        if (isset(static::$phoneCodesData[$key])) {
+            return static::$phoneCodesData[$key];
         }
         return null;
     }
