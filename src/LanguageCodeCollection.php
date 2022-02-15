@@ -6,7 +6,7 @@
  * @author    Meshveliani <giorgi.meshveliani@gmail.com>
  * @copyright 2022 (c) George Meshveliani - all-country-codes
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
- * @link      https://github.com/george1meshveliani/all-country-codes
+ * @link      https://github.com/George1Meshveliani/all-country-codes
  */
 namespace Meshvelius\LanguageCodes;
 
