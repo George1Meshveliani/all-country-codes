@@ -3,7 +3,7 @@
 /**
  * List of 217 language codes: ISO 639-1.
  *
- * @author    Meshveliani <giorgi.meshveliani@gmail.com>
+ * @author    George Meshveliani <giorgi.meshveliani@gmail.com>
  * @copyright 2022 (c) George Meshveliani - all-country-codes
  * @license   https://opensource.org/licenses/MIT - The MIT License (MIT)
  * @link      https://github.com/George1Meshveliani/all-country-codes
@@ -21,7 +21,7 @@ class LanguageCodeCollection {
      *
      * @var array
      */
-    protected static $data = [
+    protected static array $languageCodesData = [
         'aa' => 'Afar',
         'ab' => 'Abkhazian',
         'af' => 'Afrikaans',
@@ -247,7 +247,7 @@ class LanguageCodeCollection {
      * @return array
      */
     public static function all() {
-        return static::$data;
+        return static::$languageCodesData;
     }
 
     /**
@@ -258,8 +258,8 @@ class LanguageCodeCollection {
      * @return string|null → language code or null
      */
     public static function get($key) {
-        if (isset(static::$data[$key])) {
-            return static::$data[$key];
+        if (isset(static::$languageCodesData[$key])) {
+            return static::$languageCodesData[$key];
         }
         return null;
     }

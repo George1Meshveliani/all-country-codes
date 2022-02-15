@@ -29,8 +29,7 @@ class LanguageCodes {
      *
      * @return string|false → country name
      */
-    public static function getLanguagesFromCode($languageCode)
-    {
+    public static function getLanguageFromLanguageCode($languageCode) {
         return LanguageCodeCollection::get($languageCode) ?: false;
     }
 
@@ -41,8 +40,7 @@ class LanguageCodes {
      *
      * @return string|false → language code
      */
-    public static function getCodesFromLanguage($languageName)
-    {
+    public static function getLanguageCodeFromLanguage($languageName) {
         return array_search($languageName, LanguageCodeCollection::all(),true);
     }
 }
