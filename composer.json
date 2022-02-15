@@ -18,6 +18,12 @@
             "role":     "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/George1Meshveliani/all-country-codes.git"
+        }
+    ],
     "support": {
         "source": "https://github.com/George1Meshveliani/all-country-codes"
     },
@@ -36,12 +42,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Meshveliani\\LanguageCode\\": "src/"
+            "Meshvelius\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Meshveliani\\LanguageCode\\": "tests/"
+            "Meshvelius\\": "tests/"
         }
     },
     "extra": {
