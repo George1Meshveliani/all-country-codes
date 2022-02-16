@@ -17,7 +17,7 @@ class PhoneCodes {
      *
      * @return array → language codes and language names
      */
-    public static function getCountry() {
+    public static function getPhoneCountry() {
         return CountryCodesCollection::allPhones();
     }
 
@@ -29,7 +29,7 @@ class PhoneCodes {
      * @return string|false → country name
      */
     public static function getCountryNameFromPhoneCode($phoneCode) {
-        return CountryCodesCollection::getCountry($phoneCode) ?: false;
+        return CountryCodesCollection::getPhoneCountry($phoneCode) ?: false;
     }
 
     /**

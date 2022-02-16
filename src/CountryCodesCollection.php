@@ -314,7 +314,7 @@ class CountryCodesCollection {
      *
      * @return string|null → phone code or null
      */
-    public static function getCountry($key) {
+    public static function getPhoneCountry($key) {
         if (isset(static::$phoneCodesData[$key])) {
             return static::$phoneCodesData[$key];
         }
