@@ -17,7 +17,7 @@ class PhoneCodes {
      *
      * @return array → language codes and language names
      */
-    public static function getPhoneCountry() {
+    public static function getPhoneCountries() {
         return CountryCodesCollection::allPhones();
     }
 
@@ -29,7 +29,7 @@ class PhoneCodes {
      * @return string|false → country name e.g 'Georgia'
      */
     public static function getCountryNameFromPhoneCode($phoneCode) {
-        return CountryCodesCollection::getPhoneCountry($phoneCode) ?: false;
+        return CountryCodesCollection::getPhoneCountries($phoneCode) ?: false;
     }
 
     /**
@@ -39,7 +39,7 @@ class PhoneCodes {
      *
      * @return string|false → phone code, e.g '+995'
      */
-    public static function getPhoceCodeFromCountryName($countryName) {
+    public static function getPhoneCodeFromCountryName($countryName) {
         return array_search($countryName, CountryCodesCollection::allPhones(),true);
     }
 }
