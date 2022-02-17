@@ -22,11 +22,11 @@ class PhoneCodes {
     }
 
     /**
-     * Get language name from language code.
+     * Get country name from calling code.
      *
-     * @param string $languageCode → language code, e.g. 'es'
+     * @param string $phoneCode → calling code, e.g. '+995'
      *
-     * @return string|false → country name
+     * @return string|false → country name e.g 'Georgia'
      */
     public static function getCountryNameFromPhoneCode($phoneCode) {
         return CountryCodesCollection::getPhoneCountry($phoneCode) ?: false;
@@ -37,7 +37,7 @@ class PhoneCodes {
      *
      * @param string $countryName → country name, e.g. 'Georgia'
      *
-     * @return string|false → phone code
+     * @return string|false → phone code, e.g '+995'
      */
     public static function getPhoceCodeFromCountryName($countryName) {
         return array_search($countryName, CountryCodesCollection::allPhones(),true);

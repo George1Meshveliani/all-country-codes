@@ -25,7 +25,7 @@ class LanguageCodes {
     /**
      * Get language name from language code.
      *
-     * @param string $languageCode → language code, e.g. 'es'
+     * @param string $languageCode → language code, e.g. 'ka'
      *
      * @return string|false → country name
      */
@@ -36,7 +36,7 @@ class LanguageCodes {
     /**
      * Get language code from language name.
      *
-     * @param string $languageName → language name, e.g. 'Spanish'
+     * @param string $languageName → language name, e.g. 'Georgian'
      *
      * @return string|false → language code
      */
