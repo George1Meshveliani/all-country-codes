@@ -1,6 +1,7 @@
 {
     "name":        "george1meshveliani/all-country-codes",
     "type":        "library",
+    "version":     "0.0.1",
     "description": "List of language and calling codes.",
     "keywords": [
         "Language code",
@@ -10,7 +11,7 @@
         "PHP",
         "Country code",
         "Calling code",
-        "Phone code",
+        "Phone code"
     ],
     "license": "MIT",
     "authors": [
