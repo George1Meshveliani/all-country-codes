@@ -18,7 +18,7 @@
     dump(LanguageCodes::getLanguageCodeFromLanguage('Georgian')); // "ka"
     dump(LanguageCodes::getLanguageFromLanguageCode('ka'));       // "Georgian"
     dump(PhoneCodes::getPhoneCountry());
-    dump(PhoneCodes::getPhoceCodeFromCountryName('Georgia'));     // "+995"
+    dump(PhoneCodes::getPhoneCodeFromCountryName('Georgia'));     // "+995"
     dump(PhoneCodes::getCountryNameFromPhoneCode('+995'));        // "Georgia"
     
 
